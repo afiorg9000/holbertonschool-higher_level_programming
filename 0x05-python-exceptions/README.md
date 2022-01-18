@@ -5,7 +5,7 @@ Resources
 ---------
 **Read or watch**:
 
-- [Errors and Exceptions] (https://intranet.hbtn.io/rltoken/1XjevR2nDR3YtWtsY-6P1Q "Errors and Exceptions")
+- [Errors and Exceptions](https://docs.python.org/3/tutorial/errors.html "Errors and Exceptions")
 - [Learn to Program 11 Static & Exception Handling (starting at minute 7)](https://intranet.hbtn.io/rltoken/uHg99jd88sVrhuGUDfwT8g "Learn to Program 11 Static & Exception Handling")
 
 Learning Objectives
