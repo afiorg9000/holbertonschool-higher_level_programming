@@ -27,7 +27,7 @@ TypeError: 'NoneType' object is not iterable
 
     >>> my_list = MyList([1, 2], [3, 4])
     Traceback (most recent call last):
-    TypeError: list() takes at most 1 argument (2 given)
+  TypeError: list expected at most 1 argument, got 2
 
 Usage
 =====
@@ -112,8 +112,7 @@ Note that lists of strings are sorted lexographically.
 ::
 
     >>> my_list.print_sorted()
-    ['h', 'e', 'l', 'l', 'o']
-
+    ['e', 'h', 'l', 'l', 'o']
 
 ::
 
@@ -133,4 +132,4 @@ Note that lists of strings are sorted lexographically.
     >>> my_list = MyList([1, "h", "l", 5])
     >>> my_list.print_sorted()
     Traceback (most recent call last):
-    TypeError: unorderable types: str() < int()
+    TypeError: '<' not supported between instances of 'str' and 'int'
