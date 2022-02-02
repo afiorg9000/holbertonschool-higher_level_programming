@@ -35,6 +35,15 @@ The original matrix is left unchanged.
 
 ::
 
+>>> matrix = [
+... [3, 9],
+... [4.0, 5.0, 1.0]
+... ]
+>>> print(matrix_divided(matrix, 3))
+[[1.0, 3.0], [1.33, 1.67, 0.33]]
+
+::
+
     >>> print(matrix)
     [[1, 2, 3], [4, 5, 6]]
 
@@ -133,6 +142,8 @@ of different sizes, a new TypeError is raised.
     >>> print(matrix_divided(matrix, 3))
     Traceback (most recent call last):
     TypeError: Each row of the matrix must have the same size
+
+::
 
 Invalid Divisors
 ================
