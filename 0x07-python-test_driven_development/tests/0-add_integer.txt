@@ -3,7 +3,11 @@
 ===========================
 
 This module defines an integer addition function `add_integer(a, b=98)`.
-
+://twitter.com/home    """Print text with two new lines after each '.', '?', and ':'.
+    Args:
+        text (string): The text to print.
+    Raises:
+        TypeError: If text is not a string.
 Using ``add_integer``
 =====
 
