@@ -6,4 +6,3 @@ class BaseGeometry:
     """A class with public attribute area"""
     def area(self):
         raise Exception("area() is not implemented")
-
