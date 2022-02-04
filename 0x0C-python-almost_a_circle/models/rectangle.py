@@ -21,11 +21,11 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        self.__width = value
         if type(value) is not int:
             raise TypeError("width must be an integer")
         elif value < 0:
             raise ValueError("x must be >= 0")
+        self.__width = value
 
     @property
     def height(self):
@@ -65,3 +65,10 @@ class Rectangle(Base):
         elif value < 0:
             raise ValueError("x must be >= 0")
         self.__y = value
+
+    """
+    Task 4.
+    """
+    def area(self):
+        """ returns area value of the rectangle """
+        return self.width * self.height
