@@ -42,7 +42,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        """ returns x attribute """
+        """ returns x coordinate of the rectangle """
         return self.__x
 
     @x.setter
@@ -55,7 +55,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """ returns y attribute """
+        """ returns y coordinate of the rectangle """
         return self.__y
 
     @y.setter
@@ -78,8 +78,15 @@ class Rectangle(Base):
     """
     def display(self):
         """prints in stdout the Rectangle instance with the character #"""
-        for i in range(0, self.height):
-            print("#" * self.width)
+        if self.width == 0 or self.height == 0:
+            print("")
+            return
+
+        [print("") for y in range(self.y)]
+        for h in range(self.height):
+            [print(" ", end="") for x in range(self.x)]
+            [print("#", end="") for w in range(self.width)]
+            print("")
     """
     Task 6.
     """
