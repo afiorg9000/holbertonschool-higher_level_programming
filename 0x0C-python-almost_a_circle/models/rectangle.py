@@ -21,11 +21,11 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        self.__width = value
         if type(value) is not int:
             raise TypeError("width must be an integer")
         elif value < 0:
             raise ValueError("x must be >= 0")
-        self.__width = value
 
     @property
     def height(self):
@@ -98,7 +98,7 @@ class Rectangle(Base):
     """
     Task 8.
     """
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """assigns an argument to each attribute:
 
 1st argument should be the id attribute
