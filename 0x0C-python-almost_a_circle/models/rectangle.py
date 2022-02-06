@@ -93,4 +93,28 @@ class Rectangle(Base):
     def __str__(self):
         """returns..."""
         return "[Rectangle] ({}) {}/{} - {}/{}".\
-            format(self.id, self.__x, self.__y, self.__width, self.__height)
+                format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    """
+    Task 8.
+    """
+    def update(self, *args):
+        """assigns an argument to each attribute:
+
+1st argument should be the id attribute
+2nd argument should be the width attribute
+3rd argument should be the height attribute
+4th argument should be the x attribute
+5th argument should be the y attribute"""
+        args_list = ["id", "width", "height", "x", "y"]
+        if args and args[0] is not None:
+            if len(args) > len(args_list):
+                max_len = len(args_list)
+            else:
+                max_len = len(args)
+            for i in range(max_len):
+                setattr(self, args_list[i], args[i])
+        elif kwargs is not None:
+            for key in kwargs:
+                if hasattr(self, key) is True:
+                    setattr(self, key, kwargs[key])
