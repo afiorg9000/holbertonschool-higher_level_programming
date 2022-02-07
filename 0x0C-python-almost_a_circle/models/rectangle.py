@@ -5,6 +5,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """Represents a rectangle class"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """init the rectangle instance"""
         super().__init__(id)
@@ -20,6 +21,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        """setter width method"""
         self.__width = value
         if type(value) is not int:
             raise TypeError("width must be an integer")
