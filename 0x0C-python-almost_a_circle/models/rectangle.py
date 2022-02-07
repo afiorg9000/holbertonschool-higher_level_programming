@@ -58,7 +58,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """ returns y coordinate of the rectangle """
+        """returns y coordinate of the rectangle """
         return self.__y
 
     @y.setter
@@ -103,13 +103,7 @@ class Rectangle(Base):
     Task 8.
     """
     def update(self, *args, **kwargs):
-        """assigns an argument to each attribute:
-
-1st argument should be the id attribute
-2nd argument should be the width attribute
-3rd argument should be the height attribute
-4th argument should be the x attribute
-5th argument should be the y attribute"""
+        """assigns an argument to each attribute:"""
         args_list = ["id", "width", "height", "x", "y"]
         if args and args[0] is not None:
             if len(args) > len(args_list):
