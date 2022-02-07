@@ -118,3 +118,12 @@ class Rectangle(Base):
             for key in kwargs:
                 if hasattr(self, key) is True:
                     setattr(self, key, kwargs[key])
+
+    def to_dictionary(self):
+        return {
+                "x": self.x,
+                "y": self.y,
+                "id": self.id,
+                "height": self.height,
+                "width": self.width
+                }
