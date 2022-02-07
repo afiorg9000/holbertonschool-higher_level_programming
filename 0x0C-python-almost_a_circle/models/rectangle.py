@@ -18,19 +18,6 @@ class Rectangle(Base):
         super().__init__(id)
 
     @property
-    def width(self):
-        """ returns width of the rectangle """
-        return self.__width
-
-    @width.setter
-    def width(self, value):
-        if type(value) is not int:
-            raise TypeError("width must be an integer")
-        if value <= 0:
-            raise ValueError("width must be > 0")
-        self.__width = value
-
-    @property
     def height(self):
         """ returns height of the rectangle """
         return self.__height
@@ -42,6 +29,19 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("height must be > 0")
         self.__height = value
+
+    @property
+    def width(self):
+        """ returns width of the rectangle """
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        self.__width = value
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
 
     @property
     def x(self):
@@ -66,7 +66,7 @@ class Rectangle(Base):
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
-            raise ValueError("y must be > 0")
+            raise ValueError("y must be >= 0")
         self.__y = value
 
     def area(self):
@@ -112,8 +112,8 @@ class Rectangle(Base):
         """dictionary"""
         return {
                 "x": self.x,
-                "y": self.y,
+                "width": self.width,
                 "id": self.id,
                 "height": self.height,
-                "width": self.width
+                "y": self.y
                 }
