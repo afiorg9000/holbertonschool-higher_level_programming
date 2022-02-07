@@ -19,7 +19,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-        args_list = ["id", "width", "x", "y"]
+        args_list = ["id", "size", "x", "y"]
         if args and args[0] is not None:
             if len(args) > len(args_list):
                 length = len(args_list)
@@ -36,8 +36,8 @@ class Square(Rectangle):
         """dictionary"""
         return {
                 "id": self.id,
-                "x": self.x,
                 "size": self.size,
+                "x": self.x,
                 "y": self.y,
                 }
 
