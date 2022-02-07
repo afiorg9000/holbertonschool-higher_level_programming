@@ -1,11 +1,12 @@
 #!/usr/bin/python
+""" module that contains Rectangle class """
 
 
 from models.base import Base
 
 
 class Rectangle(Base):
-    """Represents a rectangle"""
+    """Represents a rectangle class"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """init the rectangle instance"""
         super().__init__(id)
@@ -34,6 +35,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        """setter height method"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -47,6 +49,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        """setter width method"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -60,6 +63,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """setter width method"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         elif value < 0:
@@ -120,6 +124,7 @@ class Rectangle(Base):
                     setattr(self, key, kwargs[key])
 
     def to_dictionary(self):
+        """dictionary"""
         return {
                 "x": self.x,
                 "y": self.y,
