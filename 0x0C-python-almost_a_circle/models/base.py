@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""Base"""
+""" module that contains base class """
 
 
 class Base:
     """Base class"""
+
     __nb_objects = 0
 
     def __init__(self, id=None):
