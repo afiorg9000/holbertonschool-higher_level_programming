@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Defines a square class."""
+
+
 from models.rectangle import Rectangle
 
 
@@ -11,6 +13,7 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """size getter"""
         return self.width
 
     @size.setter
@@ -45,4 +48,7 @@ class Square(Rectangle):
 
         def __str__(self):
             """overloading str method"""
-            return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.height)
+            return "[Square] ({}) {}/{} - {}".format(self.id,
+                                                     self.x,
+                                                     self.y,
+                                                     self.height)
