@@ -23,6 +23,11 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def __str__(self):
+        """ method to returns [Rectangle] """
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
+                                                 self.y, self.width)
+
     def update(self, *args, **kwargs):
         """assigns attributes"""
         args_list = ["id", "size", "x", "y"]
@@ -46,10 +51,3 @@ class Square(Rectangle):
                 "size": self.size,
                 "y": self.y,
                 }
-
-        def __str__(self):
-            """overloading str method"""
-            return "[Square] ({}) {}/{} - {}".format(self.id,
-                                                     self.x,
-                                                     self.y,
-                                                     self.height)
