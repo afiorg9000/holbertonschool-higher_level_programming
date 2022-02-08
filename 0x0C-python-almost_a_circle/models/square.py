@@ -15,10 +15,12 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
+        """setter to assign the width and height to the same value"""
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
+        """assigns attributes"""
         args_list = ["id", "size", "x", "y"]
         if args and args[0] is not None:
             if len(args) > len(args_list):
@@ -42,4 +44,5 @@ class Square(Rectangle):
                 }
 
         def __str__(self):
+            """overloading str method"""
             return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.height)
