@@ -5,6 +5,7 @@
 import json
 import csv
 
+
 class Base:
     """Base class"""
 
@@ -67,9 +68,8 @@ class Base:
                 list_r = cls.from_json_string(f.read())
                 for i in list_r:
                     lists.append(cls.create(**i))
-        except:
-            pass
-        return lists
+        except IOError:
+            return lists
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
