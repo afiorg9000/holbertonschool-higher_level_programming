@@ -50,3 +50,4 @@ class TestRectangle(unittest.TestCase):
         """method that tests negative height"""
         with self.assertRaises(ValueError) as cm:
             rectangle = Rectangle(4, -7)
+
