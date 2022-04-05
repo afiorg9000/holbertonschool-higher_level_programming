@@ -6,11 +6,11 @@ module.exports = class Rectangle {
       this.width = width;
       this.height = height;
     }
-}
-
-print () {
-  for (let idx = 0; idx < this.height; idx++) {
-    console.log('X'.repeat(this.width));
   }
-}
-}
+
+  print () {
+    for (let idx = 0; idx < this.height; idx++) {
+      console.log('X'.repeat(this.width));
+    }
+  }
+};
