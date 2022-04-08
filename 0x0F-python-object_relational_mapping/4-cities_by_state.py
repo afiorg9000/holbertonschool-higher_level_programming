@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
 import sys
-import pymysql as MySQLdb
+import MySQLdb
 
 if __name__ == "__main__":
     # opens database connection
-    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1], passwd="test", db=sys.argv[3])
+    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     # prepare a cursor object using cursor() method
     cur = db.cursor()
     # execute SQL query using execute() method.
