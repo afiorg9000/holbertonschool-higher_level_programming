@@ -1,20 +1,18 @@
 #!/usr/bin/python3
 
+"""lists all cities from the database hbtn_0e_4_usa"""
 import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    # opens database connection
-    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
-    # prepare a cursor object using cursor() method
+    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                         passwd=sys.argv[2], db=sys.argv[3])
     cur = db.cursor()
-    # execute SQL query using execute() method.
-    cur.execute("SELECT cities.id, cities.name, states.name FROM cities INNER JOIN states ON cities.state_id = states.id")
-    
-    # Fetch a single row using fetchone() method.
+    cur.execute("SELECT cities.id, cities.name, states.name"
+                "FROM cities INNER JOIN states"
+                "ON cities.state_id = states.id")
     rows = cur.fetchall()
     for row in rows:
         print(row)
- 
     cur.close()
     db.close()
