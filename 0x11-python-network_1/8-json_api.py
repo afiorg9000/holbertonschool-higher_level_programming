@@ -3,13 +3,14 @@
 import requests
 import sys
 
-q = sys.argv[1]
 
 if __name__ == "__main__":
-    if len(q) < 1:
+    try:
         data = {"q": ""}
-    elif len(q) > 1:
-        data = sys.argv[1]
+
+    except:
+        data = {"q": sys.argv[1]}
+
     try:
         url = requests.post("http://0.0.0.0:5000/search_user", data)
         if url.json():
