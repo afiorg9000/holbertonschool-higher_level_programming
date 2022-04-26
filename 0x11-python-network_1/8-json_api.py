@@ -1,10 +1,11 @@
 #!/usr/bin/python3
+"""search API"""
 import requests
 import sys
 
+q = sys.argv[1]
 
 if __name__ == "__main__":
-    q = sys.argv[1]
     if len(q) < 1:
         data = {"q": ""}
     elif len(q) > 1:
