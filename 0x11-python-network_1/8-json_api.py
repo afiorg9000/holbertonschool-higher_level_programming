@@ -13,10 +13,10 @@ if __name__ == "__main__":
 
     try:
         url = requests.post("http://0.0.0.0:5000/search_user", data)
-        if url.json():
+        if url.json().get("id") is not None:
             print("[{}] {}".format(url.json().get("id"),
                                    url.json().get("name")))
         else:
             print("No result")
-    except ValueError:
+    except:
         print("Not a valid JSON")
