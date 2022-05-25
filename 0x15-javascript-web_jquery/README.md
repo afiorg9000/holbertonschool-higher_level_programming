@@ -3,16 +3,6 @@
 
 -   By Guillaume, CTO at Holberton School
 
-Concepts
---------
-
-*For this project, students are expected to look at these concepts:*
-
--   [JavaScript in the browser](https://alx-intranet.hbtn.io/concepts/3)
--   [Dealing with data statically versus dynamically](https://alx-intranet.hbtn.io/concepts/35)
-
-![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/305/4724718.jpg)
-
 Resources
 ---------
 
