@@ -1,14 +1,7 @@
-# holbertonschool-higher_level_programming
+## High Level Programming
+> This repository was made to understand object oriented programming. Each repo in this repository holds code that illustrates an essential concept of programming, specific to Python, as well as other higher level concepts such as networking, databases, and Restful API's.
 
-## Structure
-
-
-* [0x00. Python - Hello, World](./0x00-python-hello_world)
-* [0x01. Python - if/else, loops, functions](./0x01-python-if_else_loops_functions)
-* [0x02. Python - import & modules](./0x02-python-import_modules)
-* [0x03. Python - Data Structures: Lists, Tuples](./0x03-python-data_structures)
-* [0x04. Python - More Data Structures: Set, Dictionary](./0x04-python-more_data_structures)
-* [0x05. Python - Exceptions](./0x05-python-exceptions)
-* [0x06. Python - Classes and Objects](./0x06-python-classes)
-* [0x07. Python - Test Driven Development](./0x07-python-test_driven_development)
-* [0x08. Python - More Classes and Objects](./0x08-python-more_classes)
+### Environment
+* Languages: Python3.4.3, MySQL, SQLAlchemy, Javascript ES6, Node.js
+* OS: Ubuntu 14.04 LTS
+* Style guidelines: [PEP 8 (version 1.7)](https://www.python.org/dev/peps/pep-0008/) || [Google Style Python Docstrings](http://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) || [Javascript Standard](https://standardjs.com/rules.html) || [Javascript Semistandard](https://github.com/Flet/semistandard) || [Airbnb Javascript Style Guide](https://github.com/airbnb/javascript) 
